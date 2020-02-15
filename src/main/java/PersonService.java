@@ -75,9 +75,6 @@ public class PersonService {
         }
     }
 
-    private void shlyapka() {
-        System.out.println("Шляпу на буче ночил?");
-    }
 }
 
 
