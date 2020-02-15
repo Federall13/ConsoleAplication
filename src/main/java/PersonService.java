@@ -2,7 +2,9 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import java.io.*;
+
+import java.io.FileWriter;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -59,18 +61,22 @@ public class PersonService {
             System.out.println("Даннный пльзователь не существует");
         }
     }
+
     public void editUserFromFile(String editFirstName, String editLasttName) throws IOException, ParseException {
         removeUserFromFile(editFirstName);
         addPersonToFile(editFirstName, editLasttName);
     }
+
     public void printUsers() throws IOException, ParseException {
         JSONArray jsonArray = getPersonsFromFile();
         for (int i = 0; i < jsonArray.size(); i++) {
             JSONObject jsonObject = (JSONObject) jsonArray.get(i);
             System.out.println(jsonObject.toString());
         }
+    }
 
-
+    private void shlyapka() {
+        System.out.println("Шляпу на буче ночил?");
     }
 }
 
